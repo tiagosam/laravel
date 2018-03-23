@@ -8,9 +8,9 @@ node('php'){
         checkout scm
     }
     
-    stage('Build App'){
-        sh 'composer install --no-scripts --prefer-dist --no-dev --ignore-platform-reqs'
-    }
+//    stage('Build App'){
+//        sh 'composer install --no-scripts --prefer-dist --no-dev --ignore-platform-reqs'
+//    }
     
     stage('Docker Build') {
         sh 'docker build -t tiagosam/laravel:$BUILD_NUMBER .'
